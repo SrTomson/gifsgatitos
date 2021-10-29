@@ -23,6 +23,30 @@ function randomGifIndex(data) {
     return i;
 }
 
+function indexForLoop(data) {
+    for (let i = 0; i < estado.indexUsados.length; i++) {
+        // if (i != estado.indexUsados[i]) {
+        //     img.src = data;
+        //     contenedor.appendChild(img);
+        // }
+        // else{
+        //     console.log('repetido ', estado.indexUsados[i])
+        //     traerRandom();
+        //     break;
+        // }
+
+        // if(estado[i] != estado.indexUsados[i]){
+        //     img.src = data;
+        //     contenedor.appendChild(img);
+        // }
+        // else{
+        //     console.log('repetido' + estado.indexUsados[i])
+        //     // traerRandom();
+        //     break;
+        // }
+    }
+}
+
 let traerRandom = function () {
     stickerOrGif();
     console.log(url);
@@ -30,20 +54,19 @@ let traerRandom = function () {
         .then(response => response.json())
         .then(data => {
             let randomIndex = randomGifIndex(data.data.length);
-            estado.indexUsados.push(randomIndex);
+            estado.indexUsados.push(data.data[randomIndex].id);
 
-            for (let i = 0; i < estado.indexUsados.length; i++) {
-                if (i != randomIndex) {
-                    img.src = data.data[i].images.downsized.url;
-                    contenedor.appendChild(img);
-                }
-                else{
-                    traerRandom();
-                    break;
-                }
-            }
-
-            console.log('estado: ', estado.indexUsados);
+            img.src = data.data[randomIndex].images.downsized.url;
+            contenedor.appendChild(img);
+            // for(let i = 0; i < estado.indexUsados.length; i++){
+            //     if(estado.indexUsados[i] != data.data[randomIndex].id){
+            //         img.src = data.data[i].images.downsized.url;
+            //         contenedor.appendChild(img);
+            //     }
+            //     else if(estado.indexUsados[i] == data.data[randomIndex].id){
+            //         console.log('repetido: ', estado.indexUsados[i])
+            //     }
+            // }
 
         })
         .catch(error => {
