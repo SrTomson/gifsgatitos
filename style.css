@@ -1,0 +1,45 @@
+.color-background{
+    background-color: rgb(133,210,208);
+}
+
+.gatitos-contenedor{
+    height: 60%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 50%;
+    padding-right: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.gatitos-imagen{
+    margin: auto;
+    height: 300px;
+}
+
+.boton-buscar {
+    display: block;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bolder;
+    background-color: rgba(31, 255, 150, 150);
+    color: rgb(150, 5, 150);
+}
+
+.color-background {
+    background-color: darkcyan;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    background-color: darkcyan;
+    color: white;
+    text-align: center;
+}
