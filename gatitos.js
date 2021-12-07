@@ -12,10 +12,10 @@ let url;
 function stickerOrGif() {
     let random = Math.floor(Math.random() * 10);
     if (random > 0 && random <= 5) {
-        url = `http://api.giphy.com/v1/stickers/search?api_key=${apiKey}&q=cat`;
+        url = `https://api.giphy.com/v1/stickers/search?api_key=${apiKey}&q=cat`;
     }
     else if (random > 5 && random <= 10) {
-        url = `http://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=cat`
+        url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=cat`
     }
 }
 
