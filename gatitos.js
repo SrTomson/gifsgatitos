@@ -1,4 +1,8 @@
 const apiKey = 'U1nx7WliKVvvfuiMA0bnRDWGGT3EQjJx';
+let estado = {
+    indexUsados: []
+};
+
 let contenedor = document.getElementById('gatitos-contenedor');
 let img = document.getElementById('gatitos-imagen');
 let btn = document.getElementById('boton-buscar');
